@@ -11,7 +11,7 @@ export class PostListItemComponent implements OnInit {
 @Input() postTitle : string;
 @Input() postContent : string;
 
-
+loveIts = 0;
   
   constructor() { }
  
@@ -20,8 +20,15 @@ export class PostListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-loveIts = 0;
+onLike(){
+//alert('like');
+this.loveIts = this.loveIts + 1;
 
+}
+
+onDislike(){
+this.loveIts = this.loveIts - 1;
+}
 
  
 
